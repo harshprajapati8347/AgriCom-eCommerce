@@ -23,6 +23,7 @@ const mongoose = require("mongoose");
 const morgan = require("morgan");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
+const { notFound, errorHandler } = require("./middleware/errorMiddleware");
 
 // Import Router
 const authRouter = require("./routes/auth");
@@ -34,6 +35,7 @@ const usersRouter = require("./routes/users");
 const customizeRouter = require("./routes/customize");
 // Import Auth middleware for check user login or not~
 const { loginCheck } = require("./middleware/auth");
+const path = require("path");
 const CreateAllFolder = require("./config/uploadFolderCreateScript");
 
 /* Create All Uploads Folder if not exists | For Uploading Images */
@@ -69,6 +71,28 @@ app.use("/api/product", productRouter);
 app.use("/api", brainTreeRouter);
 app.use("/api/order", orderRouter);
 app.use("/api/customize", customizeRouter);
+
+// Production
+
+const __dirname1 = path.resolve();
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname1, "client/build")));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname1, "client", "build", "index.html"));
+  });
+} else {
+  app.get("/", (req, res) => {
+    res.send("API is running...");
+  });
+}
+
+// --------------------------deployment------------------------------
+
+// Error Handling middlewares
+app.use(notFound);
+app.use(errorHandler);
 
 // Run Server
 const PORT = process.env.PORT || 8000;

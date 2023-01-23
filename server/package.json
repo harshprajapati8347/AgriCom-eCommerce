@@ -4,9 +4,10 @@
   "description": "AgriCom - An Agriculture E-commerce website.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
     "dev": "nodemon app.js",
-    "start": "node app.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "devStart": "node app.js && "
   },
   "repository": {
     "type": "git",
@@ -14,10 +15,6 @@
   },
   "author": "Harsh Prajapati",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/harshprajapati8347/AgriCom-eCommerce/issues"
-  },
-  "homepage": "https://github.com/harshprajapati8347/AgriCom-eCommerce#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "braintree": "^3.0.0",
