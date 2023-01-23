@@ -95,7 +95,7 @@ const SingleProduct = (props) => {
                     </span>
                   </div>
                 </div>
-                <div>${item.pPrice}.00</div>
+                <div>₹{item.pPrice}</div>
                 {/* WhisList Logic  */}
                 <div className="absolute top-0 right-0 mx-2 my-2 md:mx-4">
                   <svg

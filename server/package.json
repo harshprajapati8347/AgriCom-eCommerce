@@ -1,7 +1,7 @@
 {
   "name": "agricomm",
   "version": "1.0.0",
-  "description": "A E-commerce website.",
+  "description": "AgriCom - An Agriculture E-commerce website.",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/hasan-py/MERN_Stack_Project_Hayroo_Ecommerce"
+    "url": "https://github.com/harshprajapati8347/AgriCom-eCommerce"
   },
-  "author": "Hasan | https://hasan-py.github.io",
+  "author": "Harsh Prajapati",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/hasan-py/MERN_Stack_Project_Hayroo_Ecommerce/issues"
+    "url": "https://github.com/harshprajapati8347/AgriCom-eCommerce/issues"
   },
-  "homepage": "https://github.com/hasan-py/MERN_Stack_Project_Hayroo_Ecommerce#readme",
+  "homepage": "https://github.com/harshprajapati8347/AgriCom-eCommerce#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "braintree": "^3.0.0",

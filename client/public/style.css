@@ -147,7 +147,12 @@ sup {
  */
 
 img {
-  border-style: none;
+  border: 3px solid #ebebeb;
+}
+
+img:hover {
+  cursor: pointer;
+  border: 1px solid #000;
 }
 
 /* Forms
