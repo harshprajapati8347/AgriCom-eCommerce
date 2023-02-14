@@ -84,13 +84,6 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-// Development
-if (process.env.NODE_ENV === "development") {
-  app.get("/", (req, res) => {
-    res.send("API is running...");
-  });
-}
-
 // --------------------------deployment------------------------------
 
 // Error Handling middlewares
