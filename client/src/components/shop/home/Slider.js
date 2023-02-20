@@ -17,7 +17,9 @@ const Slider = (props) => {
 
   return (
     <Fragment>
-      <div className="relative mt-16 bg-gray-100 border-2">
+      {/* Give main div 40% when on mobile screen */}
+      
+      <div className="relative mt-16 bg-gray-100">
         {data.sliderImages.length > 0 ? (
           <img
             className="w-full"

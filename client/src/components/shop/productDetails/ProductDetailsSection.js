@@ -12,6 +12,12 @@ import { isWishReq, unWishReq, isWish } from "../home/Mixins";
 import { updateQuantity, slideImage, addToCart, cartList } from "./Mixins";
 import { totalCost } from "../partials/Mixins";
 
+// Images
+import codOrOnline from "../../../images/product-page/cod.png";
+import easyReturn from "../../../images/product-page/return.png";
+import agricomDelivered from "../../../images/product-page/agricom-delivered.png";
+import courier from "../../../images/product-page/courier.png";
+
 const apiURL = process.env.REACT_APP_API_URL;
 
 const ProductDetailsSection = (props) => {
@@ -127,7 +133,7 @@ const ProductDetailsSection = (props) => {
               alt="pic"
             />
           </div>
-          <div className="col-span-2 md:col-span-7">
+          <div className="col-span-2 md:col-span-4">
             <div className="relative">
               <img
                 className="w-full"
@@ -172,7 +178,7 @@ const ProductDetailsSection = (props) => {
               </div>
             </div>
           </div>
-          <div className="col-span-2 mt-8 md:mt-0 md:col-span-4 md:ml-6 lg:ml-12">
+          <div className="col-span-2 mt-8 md:mt-0 md:col-span-7 md:ml-6 lg:ml-12">
             <div className="flex flex-col leading-8">
               <div className="text-2xl tracking-wider">{sProduct.pName}</div>
               <div className="flex justify-between items-center">
@@ -216,7 +222,58 @@ const ProductDetailsSection = (props) => {
               </div>
             </div>
             <div className="my-4 md:my-6 text-gray-600">
-              {sProduct.pDescription}
+              {/* {sProduct.pDescription} */}
+              {/* review starts */}
+              <div className="flex items-center space-x-2">
+                <div className="flex items-center space-x-1">
+                  <svg
+                    className="w-4 h-4 fill-current text-yellow-700"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"
+                    />
+                  </svg>
+                  <span className="text-sm font-medium text-gray-700">4.5</span>
+                  <span class="w-1 h-1 mx-1.5 bg-gray-500 rounded-full dark:bg-gray-400"></span>
+                </div>
+                <span className="text-sm font-medium text-gray-700">
+                  200 Reviews
+                </span>
+              </div>
+              {/* Div Company/Manufacturer, CompanyName, BestSellingImage */}
+              <div className="flex items-center space-x-2">
+                <div className="flex items-center space-x-1">
+                  <h2>Company / Manufacture</h2>
+                </div>
+                <a className="text-sm font-medium text-gray-700">
+                  {/* {sProduct.pCompany} */} Jagannath Bio Tech Pvt. Ltd.
+                </a>
+                <span className="text-sm font-medium text-yellow-700">
+                  Best Seller
+                </span>
+              </div>
+            </div>
+            <div className="my-4 md:my-6">
+              <div className="flex items-center space-x-2">
+                <div className="flex items-center space-x-1">
+                  <span>Delivery to</span>
+                  <input
+                    className="border-2 p-2"
+                    type="text"
+                    placeholder="Enter Pincode"
+                  />
+                  <button className="bg-green-500 text-white px-2 py-1 rounded-md">
+                    Check
+                  </button>
+                </div>
+              </div>
             </div>
             <div className="my-4 md:my-6">
               {+quantitiy === +sProduct.pQuantity ? (
@@ -416,6 +473,30 @@ const ProductDetailsSection = (props) => {
                 </Fragment>
               )}
               {/* Incart and out of stock button End */}
+            </div>
+            {/* Make Pay On Delivery or Online Payment, 48 Hours returnable, AgriCom Delivered, Shipping Through Courier */}
+            <div className="flex space-y-2">
+              <div class="container grid grid-cols-4 p-4">
+                <div class="w-24">
+                  <img src={codOrOnline} alt="" />
+                  <span>COD or Online Payment</span>
+                </div>
+
+                <div class="w-24">
+                  <img src={easyReturn} alt="" />
+                  <span>Easy Returns upto 7 days</span>
+                </div>
+
+                <div class="w-24">
+                  <img src={agricomDelivered} alt="" />
+                  <span>AgriCom Delivered</span>
+                </div>
+
+                <div class="w-24">
+                  <img src={courier} alt="" />
+                  <span>Shipping Through Courier</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
