@@ -68,12 +68,28 @@ const ProductDetailsSectionTwo = (props) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const sliceDescription = (description) => {
+    return description.split(". ");
+  };
+
   return (
     <Fragment>
-      <section className="m-4 md:mx-12 md:my-8">
+      <section className="m-4 place-content-center md:mx-12 md:my-8">
         <Menu />
         {data.menu ? (
-          <div className="mt-6">{singleProduct.pDescription}</div>
+          <div className="mt-6">
+            {singleProduct.pDescription
+              ? sliceDescription(singleProduct.pDescription).map(
+                  (item, index) => {
+                    return (
+                      <li key={index} className="text-gray-600">
+                        {item}
+                      </li>
+                    );
+                  }
+                )
+              : ""}
+          </div>
         ) : (
           <RatingReview />
         )}
