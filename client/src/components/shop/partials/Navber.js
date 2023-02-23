@@ -39,12 +39,12 @@ const Navber = (props) => {
             >
               Shop
             </span>
-            <span
+            {/* <span
               className="hover:bg-gray-200 px-4 py-3 rounded-lg font-light tracking-widest hover:text-gray-800 cursor-pointer"
               onClick={(e) => history.push("/blog")}
             >
               Blog
-            </span>
+            </span> */}
             <span
               className="hover:bg-gray-200 px-4 py-3 rounded-lg font-light tracking-widest hover:text-gray-800 cursor-pointer"
               onClick={(e) => history.push("/contact-us")}
@@ -373,12 +373,12 @@ const Navber = (props) => {
             >
               Shop
             </span>
-            <span
+            {/* <span
               className="font-medium text-lg tracking-widest hover:text-gray-800 hover:bg-gray-200 px-3 py-2 rounded-lg cursor-pointer"
               onClick={(e) => history.push("/blog")}
             >
               Blog
-            </span>
+            </span> */}
             <span
               className="font-medium text-lg tracking-widest hover:text-gray-800 hover:bg-gray-200 px-3 py-2 rounded-lg cursor-pointer"
               onClick={(e) => history.push("/contact-us")}

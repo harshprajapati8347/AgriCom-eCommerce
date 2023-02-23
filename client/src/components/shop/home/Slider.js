@@ -15,10 +15,18 @@ const Slider = (props) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  // Auto slide image after 4 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide(data.sliderImages.length, slide, setSlide);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [slide, data.sliderImages.length]);
+
   return (
     <Fragment>
       {/* Give main div 40% when on mobile screen */}
-      
+
       <div className="relative mt-16 bg-gray-100">
         {data.sliderImages.length > 0 ? (
           <img

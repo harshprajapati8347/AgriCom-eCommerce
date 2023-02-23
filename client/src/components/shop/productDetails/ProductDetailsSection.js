@@ -183,7 +183,7 @@ const ProductDetailsSection = (props) => {
               <div className="text-2xl tracking-wider">{sProduct.pName}</div>
               <div className="flex justify-between items-center">
                 <span className="text-xl tracking-wider text-yellow-700">
-                  ${sProduct.pPrice}
+                  ₹{sProduct.pPrice}
                 </span>
                 <span>
                   <svg
