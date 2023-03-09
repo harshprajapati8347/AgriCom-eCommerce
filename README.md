@@ -25,6 +25,10 @@ a centralized platform for all agricultural needs.
 
 ## Prerequisites
 
+- Run this cmd to Clone the repository
+
+        git clone https://github.com/harshprajapati8347/AgriCom-eCommerce
+
 - Download & Install [``NodeJs``](https://nodejs.org/en/download/)
         
         Open command prompt & run ``node --version`` to check if it is installed or not.
