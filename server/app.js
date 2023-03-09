@@ -1,7 +1,7 @@
 // * Issue 2:
-// For admin signup just go to the auth 
-// controller then newUser obj, you will 
-// find a role field. role:1 for admin signup & 
+// For admin signup just go to the auth
+// controller then newUser obj, you will
+// find a role field. role:1 for admin signup &
 // role: 0 or by default it for customer signup.
 // go user model and see the role field.
 
@@ -50,7 +50,7 @@ app.use("/api/product", productRouter);
 app.use("/api", brainTreeRouter);
 app.use("/api/order", orderRouter);
 app.use("/api/customize", customizeRouter);
-app.use("/api/contact-us", contactusRouter)
+app.use("/api/contact-us", contactusRouter);
 
 // Production
 if (process.env.NODE_ENV === "production") {
