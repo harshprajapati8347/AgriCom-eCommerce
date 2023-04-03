@@ -6,19 +6,19 @@ const productsFolder = "./public/uploads/products";
 
 const CreateAllFolder = () => {
   if (!fs.existsSync(categoriesFolder)) {
-    fs.mkdirSync(categoriesFolder, {
+    fs.mkdir(categoriesFolder, {
       recursive: true,
     });
   }
 
   if (!fs.existsSync(customizeFolder)) {
-    fs.mkdirSync(customizeFolder, {
+    fs.mkdir(customizeFolder, {
       recursive: true,
     });
   }
 
   if (!fs.existsSync(productsFolder)) {
-    fs.mkdirSync(productsFolder, {
+    fs.mkdir(productsFolder, {
       recursive: true,
     });
   }
